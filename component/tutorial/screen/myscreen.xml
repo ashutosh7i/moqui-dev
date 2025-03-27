@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/xml-screen-3.xsd"
+        require-authentication="anonymous-all">
+
+<widgets>
+
+<!--    <render-mode>-->
+<!--        <text type="html"><![CDATA[<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head>-->
+<!--    <title>FreeMarker Example</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--    <h1>Hello, World!</h1>-->
+<!--</body>-->
+<!--</html>-->
+<!--]]></text>-->
+<!--    </render-mode>-->
+
+
+<!--    <label text="Hello World from label" />-->
+
+<!--    to include external screen-->
+<!--    <include-screen location="component://tutorial/screen/myscreen.xml"/>-->
+
+<!--    <image url="component://tutorial/screen/webroot/images/LincolnSignature.png" width="50" alt="s" />-->
+<render-mode>
+    <text type="html" location="component://tutorial/screen/helloworld.html"/>
+</render-mode>
+
+<!--    <render-mode>-->
+<!--        <text type="html"-->
+<!--              location="component://tutorial/screen/helloworld.html.ftl"/>-->
+<!--        <text type="xsl-fo" no-boundary-comment="true"-->
+<!--              location="component://webroot/screen/includes/Header.xsl-fo.ftl"/>-->
+<!--    </render-mode>-->
+<!--    <render-mode>-->
+<!--        <text type="html"><![CDATA[<body><h1>hii</h1></body>]]></text>-->
+<!--&lt;!&ndash;        <text type="html"&ndash;&gt;-->
+<!--&lt;!&ndash;              location="component/tutorial/screen/helloworld.html"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <text type="xsl-fo" no-boundary-comment="true"&ndash;&gt;-->
+<!--&lt;!&ndash;              location="component://webroot/screen/includes/Header.xsl-fo.ftl"/>&ndash;&gt;-->
+<!--    </render-mode>-->
+<!--</widgets>-->
+<!--    &lt;!&ndash;    createProduct&ndash;&gt;-->
+<!--    <transition name="createProduct">-->
+<!--        <actions>-->
+<!--            <service-call name="create#Product" in-map="context" out-map="context" />-->
+<!--        </actions>-->
+<!--        <default-response url="."/>-->
+<!--    </transition>-->
+
+<!--    &lt;!&ndash;    createProductPrice&ndash;&gt;-->
+<!--    <transition name="createProductPrice">-->
+<!--        <actions>-->
+<!--            <service-call name="create#ProductPrice" in-map="context" out-map="context"/>-->
+<!--        </actions>-->
+<!--        <default-response url="."/>-->
+<!--    </transition>-->
+
+<!--    &lt;!&ndash;    createProductFeature&ndash;&gt;-->
+<!--    <transition name="createProductDimension">-->
+<!--        <actions>-->
+<!--            <service-call name="create#ProductDimension" in-map="context" out-map="context"/>-->
+<!--        </actions>-->
+<!--        <default-response url="."/>-->
+<!--    </transition>-->
+
+<!--    &lt;!&ndash;    createProductContent&ndash;&gt;-->
+<!--    <transition name="createProductContent">-->
+<!--        <actions>-->
+<!--            <service-call name="create#ProductContent" in-map="context" out-map="context"/>-->
+<!--        </actions>-->
+<!--        <default-response url="."/>-->
+<!--    </transition>-->
+
+<!--    &lt;!&ndash;    createProductAssoc&ndash;&gt;-->
+<!--    <transition name="createProductAssoc">-->
+<!--        <actions>-->
+<!--            <service-call name="create#ProductAssoc" in-map="context" out-map="context"/>-->
+<!--        </actions>-->
+<!--        <default-response url="."/>-->
+<!--    </transition>-->
+
+<!--    <widgets>-->
+<!--        <container-dialog id="product" button-text="createProduct">-->
+<!--            <form-single name="Product" transition="createProduct">-->
+<!--                <auto-fields-entity entity-name="custom.udm.Product" include="nonpk" field-type="edit"/>-->
+<!--                <field name="submitButton"><default-field title="Create"><submit/></default-field></field>-->
+<!--            </form-single>-->
+<!--        </container-dialog>-->
+
+<!--        <container-dialog id="price" button-text="createProductPrice">-->
+<!--            <form-single name="ProductPrice" transition="createProductPrice">-->
+<!--                <auto-fields-entity entity-name="custom.udm.ProductPrice" include="nonpk" field-type="edit"/>-->
+<!--                <field name="submitButton"><default-field title="Create"><submit/></default-field></field>-->
+<!--            </form-single>-->
+<!--        </container-dialog>-->
+
+<!--        &lt;!&ndash;    createProductDimension&ndash;&gt;-->
+<!--        <container-dialog id="dimension" button-text="createProductDimension">-->
+<!--            <form-single name="ProductDimension" transition="createProductDimension">-->
+<!--                <auto-fields-entity entity-name="custom.udm.ProductDimension"  field-type="edit"/>-->
+<!--                <field name="submitButton"><default-field title="Create"><submit/></default-field></field>-->
+<!--            </form-single>-->
+<!--        </container-dialog>-->
+
+<!--        &lt;!&ndash;    createProductContent&ndash;&gt;-->
+<!--        <container-dialog id="content" button-text="createProductContent">-->
+<!--            <form-single name="ProductContent" transition="createProductContent">-->
+<!--                <auto-fields-entity entity-name="custom.udm.ProductContent" include="nonpk" field-type="edit"/>-->
+<!--                <field name="submitButton"><default-field title="Create"><submit/></default-field></field>-->
+<!--            </form-single>-->
+<!--        </container-dialog>-->
+
+<!--        &lt;!&ndash;    createProductAssoc&ndash;&gt;-->
+<!--        <container-dialog id="assoc" button-text="createProductAssoc">-->
+<!--            <form-single name="ProductAssoc" transition="createProductAssoc">-->
+<!--                <auto-fields-entity entity-name="custom.udm.ProductAssoc" field-type="edit"/>-->
+<!--                <field name="submitButton"><default-field title="Create"><submit/></default-field></field>-->
+<!--            </form-single>-->
+<!--        </container-dialog>-->
+
+
+    </widgets>
+</screen>

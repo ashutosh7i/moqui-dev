@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Super Mario Animation Showcase</title>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/daisyui@latest"></script>
+    <style>
+        /* Base container instead of using html, body */
+        .full-page {
+          font-family: 'Press Start 2P', cursive;
+          width: 100vw;
+          height: 100vh;
+          overflow: hidden;
+          margin: 0;
+          padding: 0;
+        }
+        /* Sky and Ground Areas */
+        .sky-area, .ground-area {
+          position: relative;
+        }
+        .sky-area {
+          height: 90%;
+          background-color: #548CFF;
+        }
+        .ground-area {
+          height: 10%;
+          background-color: #C84C0C;
+          background-image: url('https://raw.githubusercontent.com/LantareCode/random-this-and-thats/master/CSS/SuperMario-Animation/images/groundblock.png');
+        }
+        /* Scorebar styling */
+        .score-bar {
+          position: absolute;
+          height: 120px;
+          width: 100%;
+          font-size: 180%;
+          color: white;
+          padding: 0 50px;
+          line-height: 0.2;
+        }
+        /* Cloud animations and styling */
+        .cloud-img {
+          position: absolute;
+          height: 100px;
+        }
+        .cloud-img:nth-child(2) {
+          top: 120px;
+          animation: wind 80s both infinite linear reverse;
+        }
+        .cloud-img:nth-child(3) {
+          top: 280px;
+          animation: wind 50s both infinite linear reverse;
+        }
+        .cloud-img:nth-child(4) {
+          top: 450px;
+          animation: wind 30s both infinite linear reverse;
+        }
+        /* Skyblocks for bricks and question blocks */
+        .sky-blocks {
+          position: absolute;
+          top: -250px;
+        }
+        .brick-img {
+          position: fixed;
+          margin: -2px;
+        }
+        .brick-img:nth-child(1) {
+          left: 600px;
+        }
+        .brick-img:nth-child(2) {
+          left: 670px;
+        }
+        .brick-img:nth-child(3) {
+          left: 740px;
+        }
+        .brick-img:nth-child(4) {
+          left: 810px;
+        }
+        /* Bush animations */
+        .bush-img {
+          position: absolute;
+          top: -70px;
+        }
+        .bush-img:nth-child(1) {
+          left: 150px;
+        }
+        .bush-img:nth-child(2) {
+          left: 900px;
+        }
+        .bush-img:nth-child(3) {
+          left: 1500px;
+        }
+        /* Mario animation styling */
+        .mario-sprite {
+          position: absolute;
+          width: 71px;
+          height: 72px;
+          background: url('https://raw.githubusercontent.com/LantareCode/random-this-and-thats/master/CSS/SuperMario-Animation/images/mariowalking/result.png') left center;
+          top: -70px;
+          left: 0px;
+          animation: play 0.8s steps(4) infinite, run 7s both infinite linear;
+        }
+        @keyframes play {
+          100% { background-position: -284px; }
+        }
+        @keyframes run {
+          from { left: -200px; }
+          to { left: 100%; }
+        }
+        @keyframes wind {
+          from { left: -300px; }
+          to { left: 100%; }
+        }
+        /* Responsive tweaks can be added here if needed */
+    </style>
+</head>
+<body>
+<div class="full-page">
+    <!-- Sky Section -->
+    <div class="sky-area">
+        <div class="score-bar">
+            <style>
+                .score-top-mario { position: absolute; }
+                .score-top-world { position: absolute; left: 55%; }
+                .score-top-time { position: absolute; left: 85%; }
+                .score-bottom-score { position: absolute; top: 90px; }
+                .score-bottom-coin { position: absolute; top: 80px; left: 30%; }
+                .score-bottom-world { position: absolute; top: 90px; left: 55.7%; }
+                .score-bottom-time { position: absolute; top: 90px; left: 85.5%; }
+            </style>
+            <p>
+                <span class="score-top-mario">MARIO</span>
+                <span class="score-top-world">WORLD</span>
+                <span class="score-top-time">TIME</span>
+                <span class="score-bottom-score">OOOOOO</span>
+                <span class="score-bottom-coin">
+            <img src="https://raw.githubusercontent.com/LantareCode/random-this-and-thats/master/CSS/SuperMario-Animation/images/Coin.gif" height="40px"> x OO
+          </span>
+                <span class="score-bottom-world">1 - 1</span>
+                <span class="score-bottom-time">111</span>
+            </p>
+        </div>
+
+        <!-- Clouds -->
+        <img class="cloud-img" src="https://raw.githubusercontent.com/LantareCode/random-this-and-thats/master/CSS/SuperMario-Animation/images/CloudSingle.gif" alt="Cloud 1">
+        <img class="cloud-img" src="https://raw.githubusercontent.com/LantareCode/random-this-and-thats/master/CSS/SuperMario-Animation/images/CloudDouble.gif" alt="Cloud 2">
+        <img class="cloud-img" src="https://raw.githubusercontent.com/LantareCode/random-this-and-thats/master/CSS/SuperMario-Animation/images/CloudTriple.gif" alt="Cloud 3">
+    </div>
+
+    <!-- Ground Section -->
+    <div class="ground-area">
+        <div class="sky-blocks">
+            <img class="brick-img" src="https://raw.githubusercontent.com/LantareCode/random-this-and-thats/master/CSS/SuperMario-Animation/images/Bricks.gif" height="70px" alt="Brick">
+            <img class="brick-img" src="https://raw.githubusercontent.com/LantareCode/random-this-and-thats/master/CSS/SuperMario-Animation/images/QuestionBlock.gif" height="70px" alt="Question Block">
+            <img class="brick-img" src="https://raw.githubusercontent.com/LantareCode/random-this-and-thats/master/CSS/SuperMario-Animation/images/Bricks.gif" height="70px" alt="Brick">
+            <img class="brick-img" src="https://raw.githubusercontent.com/LantareCode/random-this-and-thats/master/CSS/SuperMario-Animation/images/Bricks.gif" height="70px" alt="Brick">
+        </div>
+
+        <img class="bush-img" src="https://raw.githubusercontent.com/LantareCode/random-this-and-thats/master/CSS/SuperMario-Animation/images/BushSingle.gif" height="70px" alt="Bush">
+        <img class="bush-img" src="https://raw.githubusercontent.com/LantareCode/random-this-and-thats/master/CSS/SuperMario-Animation/images/BushDouble.gif" height="70px" alt="Bush">
+        <img class="bush-img" src="https://raw.githubusercontent.com/LantareCode/random-this-and-thats/master/CSS/SuperMario-Animation/images/BushSingle.gif" height="70px" alt="Bush">
+
+        <div class="mario-sprite"></div>
+    </div>
+</div>
+</body>
+</html>
