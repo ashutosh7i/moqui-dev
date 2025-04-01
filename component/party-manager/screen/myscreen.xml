@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/xml-screen-3.xsd"
+        require-authentication="anonymous-all">
+<!--    <widgets>-->
+<!--            <label text="Hello World from label" />-->
+<!--            <container type="">-->
+<!--                <text>loremlorem lorem mlorem</text>-->
+<!--            </container>-->
+<!--    </widgets>-->
+    <widgets>
+        <container-box id="formContainer" type="default">
+            <box-header>
+                <text>Registration Form</text>
+            </box-header>
+            <box-body>
+                <section name="userDetails">
+                    <widgets>
+                        <text>Please enter your full name:</text>
+                        <text-area default-value="true"/>
+                        <text-find />
+                    </widgets>
+                </section>
+                <section name="contactInfo">
+                    <widgets>
+                        <text>Please enter your email address:</text>
+                        <!-- Additional input widgets can be added here -->
+                    </widgets>
+                </section>
+            </box-body>
+        </container-box>
+    </widgets>
+</screen>
